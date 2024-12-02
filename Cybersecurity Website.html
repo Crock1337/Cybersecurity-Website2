@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website about cybersecurity created for learning and showcasing essential concepts.">
+    <title>Cybersecurity Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1d1f21;
+            color: #c9d1d9;
+        }
+
+        header {
+            background-color: #282c34;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #61dafb;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #2f3336;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .container h2 {
+            color: #61dafb;
+        }
+
+        .hidden-file, .hidden-info {
+            display: none;
+            padding: 1rem;
+            background: #202225;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .hidden-file.show, .hidden-info.show {
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer span {
+            color: #61dafb;
+        }
+
+        button {
+            background: #61dafb;
+            color: #1d1f21;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #52c7e3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cybersecurity Hub</h1>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to the Cybersecurity Hub!</h2>
+        <p>This site is dedicated to cybersecurity enthusiasts and learners. Explore, learn, and challenge yourself.</p>
+
+        <button id="reveal-file-btn">Reveal Hidden File</button>
+        <div class="hidden-file" id="hidden-file">
+            <p>Creator: <strong>Crock1337</strong></p>
+            <p>Data of the site: <strong>2024-12-02</strong></p>
+            <p>This is a sample hidden file for demonstration purposes.</p>
+        </div>
+
+        <button id="reveal-info-btn">Show Cybersecurity Information</button>
+        <div class="hidden-info" id="hidden-info">
+            <h3>Cybersecurity Insights</h3>
+            <p>Cybersecurity involves protecting systems, networks, and programs from digital attacks. These attacks aim to access, change, or destroy sensitive information, extort money, or disrupt normal operations.</p>
+
+            <h4>Famous Hacks and Hackers:</h4>
+            <ul>
+                <li><strong>Kevin Mitnick</strong>: Known as one of the most famous hackers, Mitnick hacked into dozens of systems, including the Pentagon and large corporations, before being caught.</li>
+                <li><strong>Anonymous</strong>: A decentralized group of hackers known for cyber-attacks on governments, institutions, and corporations.</li>
+                <li><strong>Albert Gonzalez</strong>: Responsible for one of the largest credit card thefts in history, stealing millions of credit card numbers.</li>
+                <li><strong>Stuxnet</strong>: A cyber weapon developed to attack Iran's nuclear facilities, showcasing how malware can impact physical systems.</li>
+            </ul>
+
+            <p>Always remember: the best defense is awareness and proactive protection of your data and systems.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 <span>Crock1337</span>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const revealButton = document.getElementById('reveal-file-btn');
+        const hiddenFile = document.getElementById('hidden-file');
+        const revealInfoButton = document.getElementById('reveal-info-btn');
+        const hiddenInfo = document.getElementById('hidden-info');
+
+        revealButton.addEventListener('click', () => {
+            hiddenFile.classList.toggle('show');
+        });
+
+        revealInfoButton.addEventListener('click', () => {
+            hiddenInfo.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
